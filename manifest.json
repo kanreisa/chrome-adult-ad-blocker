@@ -1,0 +1,22 @@
+{
+	"manifest_version": 2,
+	"name"            : "Adult Ad Blocker",
+	"version"         : "1",
+	"description"     : "Blocks adult ads.",
+	"icons": {
+		"16" : "icon16.png",
+		"48" : "icon48.png",
+		"128": "icon128.png"
+	},
+	"content_scripts": [
+		{
+			"matches": ["http://*.i-mobile.co.jp/*"],
+			"js"     : ["block.js"],
+			"all_frames": true,
+			"run_at": "document_start"
+		}
+	],
+	"permissions": [
+		"http://*.i-mobile.co.jp/*"
+	]
+}
