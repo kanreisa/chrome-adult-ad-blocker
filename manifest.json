@@ -1,23 +1,27 @@
 {
-	"manifest_version": 2,
-	"name"            : "Adult Ad Blocker",
-	"version"         : "1",
-	"description"     : "Blocks adult ads.",
-	"icons": {
-		"16" : "icon16.png",
-		"48" : "icon48.png",
-		"128": "icon128.png"
-	},
-	"content_scripts": [
-		{
-			"matches": ["http://*.i-mobile.co.jp/*", "http://ad.maist.jp/*"],
-			"js"     : ["block.js"],
-			"all_frames": true,
-			"run_at": "document_start"
-		}
-	],
-	"permissions": [
-		"http://*.i-mobile.co.jp/*",
-		"http://ad.maist.jp/*"
-	]
+    "manifest_version": 2,
+    "name"            : "Adult Ad Blocker (JP)",
+    "version"         : "2",
+    "description"     : "日本のアダルト広告をブロックします",
+    "icons": {
+        "16" : "icon16.png",
+        "48" : "icon48.png",
+        "128": "icon128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*"
+            ],
+            "js"     : ["block.js"],
+            "all_frames": true,
+            "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources": [
+        "block.html"
+    ],
+    "permissions": [
+        "http://*/*"
+    ]
 }
