@@ -21,6 +21,7 @@ window.addEventListener('DOMContentLoaded', function () {
         { by: '株式会社アイモバイル (http://i-mobile.co.jp/)', query: 'iframe[src*=".i-mobile.co.jp/"]' },
         { by: '株式会社リアズ (http://reas.jp/)', query: 'a[href^="http://www.angel-live.com/?"]' },
         { by: '不明', query: 'a[href^="http://deaicute.com/chat/"]' },
+        { by: '不明', query: 'a[href^="http://doutr.biz/"]' },
         { by: '不明', query: 'a[href^="http://burning-phoenix.kir.jp/"]' }
     ];
 
